@@ -36,7 +36,6 @@ jobs:
       - name: Build Docker image
         uses: docker/build-push-action@v4
         with:
-          context: .
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/labmanageback:${{ github.sha }}
 
