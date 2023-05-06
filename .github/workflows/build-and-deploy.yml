@@ -36,6 +36,7 @@ jobs:
           context: .
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/labmanageback:${{ github.sha }}
+          dockerfile: Dockerfile
 
   deploy:
     name: Deploy Docker image
