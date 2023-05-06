@@ -40,7 +40,7 @@
 				<goals>
 					<goal>repackage</goal>
 				</goals>
-			<execution>	
+			</execution>	
 		</executions>
             </plugin>
         </plugins>
