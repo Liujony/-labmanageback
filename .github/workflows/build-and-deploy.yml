@@ -48,7 +48,7 @@ jobs:
     needs: build
     steps:
     - name: SSH to server and update Docker container
-      uses: appleboy/ssh-action@v0.2.0
+      uses: appleboy/ssh-action@v0.1.10
       with:
         host: ${{ secrets.IP_ADDRESS }}
         username: ${{ secrets.SERVER_NAME }}
