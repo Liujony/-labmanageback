@@ -51,6 +51,10 @@ jobs:
         uses: webfactory/ssh-agent@v0.5.0
         with:
           ssh-private-key: ${{ secrets.SSH_KEY }}
+          known_hosts: ${{ secrets.KNOWN_HOSTS }}
+        env:
+          HOST: ${{ secrets.IP_ADDRESS }}
+          USERNAME: ${{ secrets.SERVER_NAME }}
       - name: Pull Docker image
         run: docker pull ${{ secrets.DOCKER_USERNAME }}/labmanageback:${{ github.sha }}
       - name: Stop and remove old container
