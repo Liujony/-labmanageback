@@ -26,7 +26,9 @@ jobs:
         shell: bash
 
       - name: Build Spring Boot project
-        run: mvn package -DskipTests
+        run: mvn -B package --file pom.xml
+        env:
+          JAVA_HOME: ${{ env.JDK_17 }}
 
       - name: Build Docker image
         uses: docker/build-push-action@v2
