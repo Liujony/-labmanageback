@@ -1,5 +1,6 @@
 package com.example.sys.service;
 
+import com.example.dto.examineTApplyDto;
 import com.example.sys.entity.Labapply;
 import com.baomidou.mybatisplus.extension.service.IService;
 
@@ -13,4 +14,5 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface ILabapplyService extends IService<Labapply> {
 
+    void updateById(examineTApplyDto examineTApplyDto);
 }

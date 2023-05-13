@@ -1,5 +1,8 @@
 package com.example.sys.entity;
 
+import com.baomidou.mybatisplus.annotation.TableId;
+import lombok.Data;
+
 import java.io.Serializable;
 
 /**
@@ -10,10 +13,12 @@ import java.io.Serializable;
  * @author wow
  * @since 2023-05-10
  */
+@Data
 public class Teacher implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
+    @TableId
     private String uuid;
 
     private String title;
