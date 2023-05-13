@@ -121,7 +121,7 @@
 		<groupId>org.springframework.boot</groupId>
         	    <artifactId>spring-boot-maven-plugin</artifactId>
         	    <configuration>
-            		<mainClass>com.baeldung.demo.DemoApplication</mainClass>
+            		<mainClass>com.example.XAdminApplication</mainClass>
             		<layout>JAR</layout>
         	    </configuration>
 		    <executions>
