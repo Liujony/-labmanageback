@@ -19,7 +19,7 @@ import java.util.Map;
 @Component
 public class TokenUtil {
 
-    @Value("${token.secretKey}")
+    @Value("${token.secretKey:default_value}")
     private String secretKey;
 
     /**
@@ -50,7 +50,7 @@ public class TokenUtil {
         Claim userId = decodedjwt.getClaim("userId");
         Claim userRole = decodedjwt.getClaim("userRole");
         Claim timeStamp = decodedjwt.getClaim("timeStamp");
-        map.put("userId", String.valueOf(userId));
+        map.put("userId", userId.asString());
         map.put("userRole", String.valueOf(userRole));
         map.put("timeStamp", timeStamp.asLong().toString());
         return map;

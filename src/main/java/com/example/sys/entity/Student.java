@@ -1,5 +1,7 @@
 package com.example.sys.entity;
 
+import com.baomidou.mybatisplus.annotation.TableId;
+
 import java.io.Serializable;
 
 /**
@@ -14,6 +16,7 @@ public class Student implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
+    @TableId
     private String uuid;
 
     private String major;

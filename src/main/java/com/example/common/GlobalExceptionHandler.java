@@ -25,7 +25,7 @@ public class GlobalExceptionHandler {
     @ResponseBody
     public Result<?> bizExceptionHandler(HttpServletRequest req, BizException e){
         log.error("发生业务异常！原因是：{}",e.getErrorMsg());
-        return Result.error(e.getErrorCode(),e.getErrorMsg());
+        return Result.error(e.getErrorMsg());
     }
 
     /**

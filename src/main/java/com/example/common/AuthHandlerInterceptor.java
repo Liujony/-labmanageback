@@ -61,6 +61,7 @@ public class AuthHandlerInterceptor implements HandlerInterceptor {
         log.info("UUID:"+userId);
         log.info("auth:"+auth);
         httpServletRequest.setAttribute("auth",auth);
+        httpServletRequest.setAttribute("UUID",userId);
         log.info(String.valueOf(httpServletRequest.getAttribute("auth")));
         return true;
     }

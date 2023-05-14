@@ -1,5 +1,7 @@
 package com.example.sys.entity;
 
+import com.baomidou.mybatisplus.annotation.TableName;
+
 import java.io.Serializable;
 
 /**
@@ -10,6 +12,7 @@ import java.io.Serializable;
  * @author wow
  * @since 2023-05-11
  */
+@TableName("StuApplyLab")
 public class StuApplyLab implements Serializable {
 
     private static final long serialVersionUID = 1L;

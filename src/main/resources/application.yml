@@ -8,7 +8,7 @@ token:
 spring:
   datasource:
 #    url: jdbc:mysql://127.0.0.1:3306/我的
-    url: jdbc:mysql://lab-mysql:3306/labmanage
+    url: jdbc:mysql://mysql:3306/我的
     username: root
 #    password: 123456
     password: labmanageDatabase
