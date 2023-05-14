@@ -124,6 +124,10 @@
                     <target>17</target>
                     <encoding>UTF-8</encoding>
                 </configuration>
+		<configuration>
+                    <includeSystemScope>true</includeSystemScope>
+                    <mainClass>com.example.XAdminApplication</mainClass>
+                </configuration>
             </plugin>
 <!--            <plugin>-->
 <!--                <groupId>org.springframework.boot</groupId>-->
