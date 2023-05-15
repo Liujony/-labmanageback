@@ -32,7 +32,7 @@ import java.util.*;
  * 学期管理
  */
 @RestController
-@RequestMapping("/semesters")
+@RequestMapping("/semister")
 public class SemestersController {
 
     @Autowired
@@ -81,13 +81,14 @@ public class SemestersController {
         return Result.success();
     }
 
+    /**
+     * 获取所有学期
+     * @param auth
+     * @return
+     */
     @GetMapping("getAllSemster")
     public Result<SemsterDto> getAllSemster(@RequestAttribute Integer auth){
         if (auth!=1) throw new BizException(ExceptionEnum.NO_AUTHORITY_TO_UPDATE);
-        if (redisUtil.hasKey(RedisConstant.Semster_CODE)){
-            SemsterDto o = (SemsterDto) redisUtil.get(RedisConstant.Semster_CODE);
-            return Result.success(o);
-        }
         List<Semesters> list = semestersService.list();
         SemsterDto semsterDto=new SemsterDto();
         List<String> list1=new ArrayList<>();
@@ -95,7 +96,7 @@ public class SemestersController {
             list1.add(list.get(i).getSemester());
         }
         semsterDto.setSemesters(new ArrayList<>(list1));
-        redisUtil.set(RedisConstant.Semster_CODE,semsterDto,RedisConstant.PAGE_EXPIRE_TIME);
+//        redisUtil.set(RedisConstant.Semster_CODE,semsterDto,RedisConstant.PAGE_EXPIRE_TIME);
         return Result.success(semsterDto);
     }
 }

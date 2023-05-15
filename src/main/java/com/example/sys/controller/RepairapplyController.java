@@ -1,5 +1,6 @@
 package com.example.sys.controller;
 
+import com.alibaba.fastjson2.JSONObject;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.example.common.BizException;
@@ -14,9 +15,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.stereotype.Controller;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Date;
+import java.util.Map;
 
 /**
  * <p>
@@ -27,7 +30,7 @@ import java.util.Date;
  * @since 2023-05-10
  */
 @RestController
-@RequestMapping("/repairapply")
+@RequestMapping("/repair")
 public class RepairapplyController {
 
 
@@ -72,5 +75,36 @@ public class RepairapplyController {
         return Result.success();
     }
 
+    /**
+     * 修改报修申请单内容
+     * @param repairapply
+     * @param auth
+     * @return
+     */
+    @PostMapping("updateMyApply")
+    public Result<?> updateMyApply(@RequestBody Repairapply repairapply,@RequestAttribute Integer auth){
+        if (auth!=3) throw new BizException(ExceptionEnum.NO_AUTHORITY_TO_UPDATE);
+        QueryWrapper<Repairapply> wrapper = new QueryWrapper<Repairapply>().eq("status", "未维修").eq("id",repairapply.getId());
+        boolean update = repairapplyService.update(repairapply, wrapper);
+        return update ?Result.success():Result.error("修改失败");
+    }
 
+    /**
+     * 删除申请
+     * @param jsonObject
+     * @param auth
+     * @return
+     */
+    @PostMapping("deleteMyApply")
+    public Result<?> deleteMyApply(@RequestBody JSONObject jsonObject, @RequestAttribute Integer auth){
+        if (auth!=3) throw new BizException(ExceptionEnum.NO_AUTHORITY_TO_UPDATE);
+        int id = repairapplyMapper.deleteById((Serializable) jsonObject.get("id"));
+        return id==1?Result.success():Result.error("删除失败");
+    }
+
+    @GetMapping("getAllLab")
+    public Result<?> getAllLab(@RequestAttribute Integer auth){
+        if (auth!=3) throw new BizException(ExceptionEnum.NO_AUTHORITY_TO_UPDATE);
+        return Result.success();
+    }
 }

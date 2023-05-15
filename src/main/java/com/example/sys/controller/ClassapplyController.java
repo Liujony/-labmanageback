@@ -32,7 +32,7 @@ import java.io.Serializable;
  */
 @RestController
 @Slf4j
-@RequestMapping("classapply")
+@RequestMapping("apply")
 public class ClassapplyController {
 
     @Autowired
@@ -174,5 +174,5 @@ public class ClassapplyController {
         return flag?Result.success():Result.error("修改失败！");
     }
 
-//    @PostMapping()
+
 }

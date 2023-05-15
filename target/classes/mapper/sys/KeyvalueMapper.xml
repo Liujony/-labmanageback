@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.sys.mapper.KeyvalueMapper">
+    <update id="updateBysemester">
+        update keyvalue set keyvalue = #{semester} where keyname = 'currentSemester'
+    </update>
+
+
+    <select id="selectByKey" resultType="com.example.sys.entity.Keyvalue">
+        select * from keyvalue where key= #{currentSemester}
+    </select>
+</mapper>

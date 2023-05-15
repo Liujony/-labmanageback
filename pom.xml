@@ -89,11 +89,6 @@
             <!--     spring security的依赖，用与给spring boot增加安全性支持
                      比如说给用户的密码加密
                   -->
-            <dependency>
-                <groupId>org.springframework.security</groupId>
-                <artifactId>spring-boot-security-core</artifactId>
-                <version>5.0.1.RELEASE</version>
-            </dependency>
 
 <!--            <dependency>-->
 <!--                <groupId>org.springframework.boot</groupId>-->
@@ -124,6 +119,10 @@
                     <target>17</target>
                     <encoding>UTF-8</encoding>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
 	    <plugin>
     		<groupId>org.springframework.boot</groupId>
