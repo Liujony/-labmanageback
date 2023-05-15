@@ -6,20 +6,21 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.example.common.BizException;
 import com.example.common.ExceptionEnum;
 import com.example.common.Result;
-import com.example.sys.entity.Classapply;
+import com.example.dto.resultLabDto;
+import com.example.sys.entity.Lab;
+import com.example.sys.entity.Labapply;
 import com.example.sys.entity.Repairapply;
 import com.example.sys.mapper.RepairapplyMapper;
+import com.example.sys.service.ILabService;
 import com.example.sys.service.IRepairapplyService;
 import com.example.vo.pageVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.stereotype.Controller;
 
 import java.io.Serializable;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.util.Date;
-import java.util.Map;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * <p>
@@ -39,6 +40,9 @@ public class RepairapplyController {
 
     @Autowired
     private RepairapplyMapper repairapplyMapper;
+
+    @Autowired
+    private ILabService labService;
 
     /**
      * 获取当前老师所申报的实验室报修
@@ -105,6 +109,15 @@ public class RepairapplyController {
     @GetMapping("getAllLab")
     public Result<?> getAllLab(@RequestAttribute Integer auth){
         if (auth!=3) throw new BizException(ExceptionEnum.NO_AUTHORITY_TO_UPDATE);
-        return Result.success();
+        List<Lab> list = labService.list();
+        ArrayList<resultLabDto> labDtos = new ArrayList<>();
+        for (int i = 0; i < list.size(); i++) {
+            resultLabDto resultLabDto=new resultLabDto();
+            resultLabDto.setId(list.get(i).getId());
+            resultLabDto.setName(list.get(i).getName());
+            labDtos.add(resultLabDto);
+        }
+        return Result.success(labDtos);
     }
+
 }

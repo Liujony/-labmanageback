@@ -17,7 +17,7 @@ public class MyCorsConfig {
     public CorsFilter corsFilter(){
         CorsConfiguration configuration = new CorsConfiguration();
         //允许http://localhost:8888来访问我们。configuration.addAllowedOrigin("*")就是允许任何人访问;
-        configuration.addAllowedOrigin("http://localhost:8888");
+        configuration.addAllowedOrigin("http://localhost:8080");
         configuration.addAllowedOrigin("http://localhost:8889");
 
 

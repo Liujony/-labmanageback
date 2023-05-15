@@ -21,6 +21,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.Serializable;
+import java.util.List;
 
 /**
  * <p>
@@ -173,6 +174,5 @@ public class ClassapplyController {
         boolean flag = classapplyService.removeById((Serializable) eq.get("id"));
         return flag?Result.success():Result.error("修改失败！");
     }
-
 
 }
