@@ -1,6 +1,7 @@
 package com.example.sys.controller;
 
 import com.alibaba.fastjson2.JSONObject;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.example.common.BizException;
 import com.example.common.ExceptionEnum;
 import com.example.common.Result;
@@ -32,7 +33,7 @@ import java.util.*;
  * 学期管理
  */
 @RestController
-@RequestMapping("/semister")
+@RequestMapping("/semester")
 public class SemestersController {
 
     @Autowired
@@ -48,9 +49,9 @@ public class SemestersController {
      * 获取当前学期
      * @return
      */
-    @GetMapping("getCurrentSemster")
+    @GetMapping("getCurrentSemester")
     public Result<Map> getCurrentSemster(@RequestAttribute Integer auth){
-        if (auth!=1) throw new BizException(ExceptionEnum.NO_AUTHORITY_TO_UPDATE);
+//        if (auth!=1) throw new BizException(ExceptionEnum.NO_AUTHORITY_TO_UPDATE);
         Keyvalue keyvalue=keyvalueService.getCurrentSemster();
         Map<String,String> map=new HashMap<>();
         map.put("semester",keyvalue.getKeyvalue());
@@ -62,7 +63,7 @@ public class SemestersController {
      * @param rq
      * @return
      */
-    @PostMapping("setCurrentSemster")
+    @PostMapping("setCurrentSemester")
     public Result<?> setCurrentSemster(@RequestBody JSONObject rq,@RequestAttribute Integer auth){
         if (auth!=1) throw new BizException(ExceptionEnum.NO_AUTHORITY_TO_UPDATE);
         keyvalueService.setCurrentSemster(String.valueOf(rq.get("semester")));
@@ -74,7 +75,7 @@ public class SemestersController {
      * @param semesters
      * @return
      */
-    @PostMapping("addSemster")
+    @PostMapping("addSemester")
     public Result<?> addSemster(@RequestBody Semesters semesters,@RequestAttribute Integer auth){
         if (auth!=1) throw new BizException(ExceptionEnum.NO_AUTHORITY_TO_UPDATE);
         semestersService.addSemster(semesters);
@@ -86,10 +87,10 @@ public class SemestersController {
      * @param auth
      * @return
      */
-    @GetMapping("getAllSemster")
+    @GetMapping("getAllSemester")
     public Result<SemsterDto> getAllSemster(@RequestAttribute Integer auth){
         if (auth!=1) throw new BizException(ExceptionEnum.NO_AUTHORITY_TO_UPDATE);
-        List<Semesters> list = semestersService.list();
+        List<Semesters> list = semestersService.list(new QueryWrapper<Semesters>().orderByDesc("semester"));
         SemsterDto semsterDto=new SemsterDto();
         List<String> list1=new ArrayList<>();
         for (int i=0;i<list.size();i++){

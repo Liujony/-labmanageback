@@ -8,6 +8,7 @@ import com.example.common.ExceptionEnum;
 import com.example.common.Result;
 import com.example.dto.examineTApplyDto;
 import com.example.sys.entity.Classapply;
+import com.example.sys.entity.Labapply;
 import com.example.sys.entity.StuApplyLab;
 import com.example.sys.entity.TeacherApplyLab;
 import com.example.sys.mapper.ClassapplyMapper;
@@ -175,4 +176,26 @@ public class ClassapplyController {
         return flag?Result.success():Result.error("修改失败！");
     }
 
+    /**
+     * 获取当前学生所申请的实验室
+     * @param pageVo
+     * @param auth
+     * @param UUID
+     * @return
+     * @date 2023-05-16 21:46
+     */
+    @GetMapping("getStuLabApply")
+    public Result<?> getStuLabApply(@RequestBody pageVo pageVo, @RequestAttribute Integer auth, @RequestAttribute String UUID){
+        if (auth!=4) throw new BizException(ExceptionEnum.NO_AUTHORITY_TO_UPDATE);
+        if (pageVo.getPage()==0) pageVo.setPage(1);
+        if (pageVo.getNum()==0) pageVo.setNum(20);
+        Page<StuApplyLab> stuApplyLabPage=new Page<>(pageVo.getPage(),pageVo.getNum());
+        Page<StuApplyLab> page = stuApplyLabMapper.selectPage(stuApplyLabPage, new QueryWrapper<StuApplyLab>().eq("stuuuid", UUID));
+        return Result.success(page);
+    }
+
+//    @PostMapping("applyStuLab")
+//    public Result<?> applyStuLab(@RequestBody Labapply labapply, @RequestAttribute Integer auth, @RequestAttribute String UUID){
+//
+//    }
 }

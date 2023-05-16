@@ -47,8 +47,5 @@ public class KeyvalueServiceImpl extends ServiceImpl<KeyvalueMapper, Keyvalue> i
     @Transactional
     public void setCurrentSemster(String semester) {
         keyvalueMapper.updateBysemester(semester);
-        if (redisUtil.get(RedisConstant.Key_CODE + "currentSemester") != null) {
-            redisUtil.del(RedisConstant.Key_CODE+"currentSemester");
-        }
     }
 }

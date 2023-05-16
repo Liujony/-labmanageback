@@ -51,6 +51,7 @@ com\example\dto\examineTApplyDto.class
 com\example\sys\service\ITeacherService.class
 com\example\sys\entity\Labapply.class
 com\example\sys\service\impl\UserServiceImpl.class
+com\example\dto\UpdateLabRepairDto.class
 com\example\sys\entity\Semesters.class
 com\example\sys\mapper\LabapplyMapper.class
 com\example\sys\service\IRepairapplyService.class
@@ -72,6 +73,7 @@ com\example\sys\mapper\TeachersMapper.class
 com\example\sys\service\IUserService.class
 com\example\sys\entity\LabType.class
 com\example\sys\service\ITeachersService.class
+com\example\sys\controller\RepairController.class
 com\example\sys\mapper\StuApplyLabMapper.class
 com\example\sys\controller\TestersController.class
 com\example\sys\mapper\ClassapplyMapper.class
@@ -79,6 +81,7 @@ com\example\sys\service\impl\TestersServiceImpl.class
 com\example\sys\service\impl\TeacherApplyLabServiceImpl.class
 com\example\sys\controller\LabController.class
 com\example\sys\entity\Classapply.class
+com\example\sys\entity\Repair.class
 com\example\sys\service\ITeacherApplyLabService.class
 com\example\sys\service\ILabapplyService.class
 com\example\sys\service\impl\LabTypeServiceImpl.class
@@ -98,5 +101,6 @@ com\example\dto\UserTokenDto.class
 com\example\sys\entity\Teachers.class
 com\example\util\RedisConstant.class
 com\example\util\TokenUtil.class
+com\example\sys\mapper\RepairMapper.class
 com\example\sys\mapper\UserMapper.class
 com\example\sys\mapper\TestersMapper.class

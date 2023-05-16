@@ -1,29 +1,28 @@
 package com.example.sys.entity;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
+import lombok.Data;
+
 import java.io.Serializable;
 import java.time.LocalDate;
 
 /**
  * <p>
- * 
+ * VIEW
  * </p>
  *
  * @author wow
- * @since 2023-05-10
+ * @since 2023-05-15
  */
-
-public class Repairapply implements Serializable {
+@Data
+@TableName("Repair")
+public class Repair implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    @TableId(value = "id", type = IdType.AUTO)
     private Integer id;
 
-    private Integer labid;
-
-    private String teacheruuid;
+    private String name;
 
     private String reason;
 
@@ -33,6 +32,8 @@ public class Repairapply implements Serializable {
 
     private String status;
 
+    private String testeruuid;
+
     public Integer getId() {
         return id;
     }
@@ -40,19 +41,12 @@ public class Repairapply implements Serializable {
     public void setId(Integer id) {
         this.id = id;
     }
-    public Integer getLabid() {
-        return labid;
+    public String getName() {
+        return name;
     }
 
-    public void setLabid(Integer labid) {
-        this.labid = labid;
-    }
-    public String getTeacheruuid() {
-        return teacheruuid;
-    }
-
-    public void setTeacheruuid(String teacheruuid) {
-        this.teacheruuid = teacheruuid;
+    public void setName(String name) {
+        this.name = name;
     }
     public String getReason() {
         return reason;
@@ -82,17 +76,24 @@ public class Repairapply implements Serializable {
     public void setStatus(String status) {
         this.status = status;
     }
+    public String getTesteruuid() {
+        return testeruuid;
+    }
+
+    public void setTesteruuid(String testeruuid) {
+        this.testeruuid = testeruuid;
+    }
 
     @Override
     public String toString() {
-        return "Repairapply{" +
+        return "Repair{" +
             "id=" + id +
-            ", labid=" + labid +
-            ", teacheruuid=" + teacheruuid +
+            ", name=" + name +
             ", reason=" + reason +
             ", applydate=" + applydate +
             ", finishdate=" + finishdate +
             ", status=" + status +
+            ", testeruuid=" + testeruuid +
         "}";
     }
 }

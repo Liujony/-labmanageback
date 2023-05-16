@@ -80,7 +80,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/mapper/sys" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -103,9 +103,11 @@
       <recent name="com.example.vo" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\IDEA_WorkSpace\x-admin - 副本 - 副本\src\main\resources\mapper\sys" />
+      <recent name="D:\IDEA_WorkSpace\x-admin - 副本 - 副本\src\main\java\com\example\sys\mapper" />
+      <recent name="D:\IDEA_WorkSpace\x-admin - 副本 - 副本\src\main\java\com\example\sys\entity" />
+      <recent name="D:\IDEA_WorkSpace\x-admin - 副本 - 副本\src\main\java\com\example\sys\controller" />
       <recent name="D:\IDEA_WorkSpace\x-admin\x-admin\src\main\java\com\example" />
-      <recent name="D:\IDEA_WorkSpace\x-admin\x-admin\src\main\java\com\example\util" />
-      <recent name="D:\IDEA_WorkSpace\x-admin\x-admin\src\main\java\com\example\common" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.example.vo" />
@@ -160,7 +162,7 @@
       <workItem from="1683814139456" duration="4856000" />
       <workItem from="1683886249359" duration="2432000" />
       <workItem from="1683951717124" duration="27705000" />
-      <workItem from="1684116153001" duration="4825000" />
+      <workItem from="1684116153001" duration="19919000" />
     </task>
     <task id="LOCAL-00001" summary="查看是否部署成功">
       <created>1684057228321</created>

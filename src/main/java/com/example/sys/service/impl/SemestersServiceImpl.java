@@ -24,13 +24,8 @@ public class SemestersServiceImpl extends ServiceImpl<SemestersMapper, Semesters
     @Autowired
     private RedisUtil redisUtil;
 
-
-    @Transactional
     @Override
     public void addSemster(Semesters semester) {
         save(semester);
-        if (redisUtil.hasKey(RedisConstant.Semster_CODE)) {
-            redisUtil.del(RedisConstant.Semster_CODE);
-        }
     }
 }
