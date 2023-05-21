@@ -81,7 +81,7 @@ public class UserController {
         String token=tokenUtil.getToken(user.getUuid(),user.getAuth());
         ResponseCookie cookie=ResponseCookie.from("TOKEN",token)
                 .httpOnly(true)
-                .secure(false)
+                .secure(true)
                 .path("/")
                 .maxAge(3600)
                 .sameSite("None")

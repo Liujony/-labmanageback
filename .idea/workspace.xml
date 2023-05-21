@@ -9,150 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a76d0980-5671-48be-b80e-f1716b7b7cfd" name="变更" comment="查看是否部署成功">
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/XAdminApplication.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/common/AuthHandlerInterceptor.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/common/BaseErrorInfoInterface.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/common/BizException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/common/ExceptionEnum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/common/GlobalExceptionHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/common/Result.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/config/AuthWebMvcConfigurer.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/config/MyCorsConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/config/MyRedisConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/config/MybatisPlusConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/dto/DeleteList.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/dto/SemsterDto.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/dto/UserDto.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/dto/UserTokenDto.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/dto/examineTApplyDto.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/dto/resultLabDto.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/sys/controller/AllclassController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/sys/controller/KeyvalueController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/sys/controller/LabController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/sys/controller/LabTypeController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/sys/controller/LabapplyController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/sys/controller/StuApplyLabController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/sys/controller/StudentController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/sys/controller/StudentsController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/sys/controller/TeacherApplyLabController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/sys/controller/TeacherController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/sys/controller/TeachersController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/sys/controller/TestersController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/sys/controller/UserController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/sys/entity/Allclass.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/sys/entity/Classapply.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/sys/entity/Keyvalue.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/sys/entity/Lab.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/sys/entity/LabType.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/sys/entity/Labapply.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/sys/entity/Semesters.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/sys/entity/StuApplyLab.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/sys/entity/Student.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/sys/entity/Students.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/sys/entity/Teacher.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/sys/entity/TeacherApplyLab.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/sys/entity/Teachers.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/sys/entity/Testers.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/sys/entity/User.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/sys/mapper/AllclassMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/sys/mapper/ClassapplyMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/sys/mapper/KeyvalueMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/sys/mapper/LabMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/sys/mapper/LabTypeMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/sys/mapper/LabapplyMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/sys/mapper/RepairapplyMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/sys/mapper/SemestersMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/sys/mapper/StuApplyLabMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/sys/mapper/StudentMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/sys/mapper/StudentsMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/sys/mapper/TeacherApplyLabMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/sys/mapper/TeacherMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/sys/mapper/TeachersMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/sys/mapper/TestersMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/sys/mapper/UserMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/sys/service/IAllclassService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/sys/service/IClassapplyService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/sys/service/IKeyvalueService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/sys/service/ILabService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/sys/service/ILabTypeService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/sys/service/ILabapplyService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/sys/service/IRepairapplyService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/sys/service/ISemestersService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/sys/service/IStuApplyLabService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/sys/service/IStudentService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/sys/service/IStudentsService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/sys/service/ITeacherApplyLabService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/sys/service/ITeacherService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/sys/service/ITeachersService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/sys/service/ITestersService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/sys/service/IUserService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/sys/service/impl/AllclassServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/sys/service/impl/ClassapplyServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/sys/service/impl/LabServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/sys/service/impl/LabTypeServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/sys/service/impl/LabapplyServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/sys/service/impl/RepairapplyServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/sys/service/impl/StuApplyLabServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/sys/service/impl/StudentServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/sys/service/impl/StudentsServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/sys/service/impl/TeacherApplyLabServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/sys/service/impl/TeacherServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/sys/service/impl/TeachersServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/sys/service/impl/TestersServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/sys/service/impl/UserServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/util/RedisConstant.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/util/RedisUtil.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/util/TokenUtil.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/vo/labApplyVo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/vo/pageVo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/vo/userVo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/mapper/sys/AllclassMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/mapper/sys/ClassapplyMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/mapper/sys/KeyvalueMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/mapper/sys/LabMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/mapper/sys/LabTypeMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/mapper/sys/LabapplyMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/mapper/sys/RepairapplyMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/mapper/sys/SemestersMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/mapper/sys/StuApplyLabMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/mapper/sys/StudentMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/mapper/sys/StudentsMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/mapper/sys/TeacherApplyLabMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/mapper/sys/TeacherMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/mapper/sys/TeachersMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/mapper/sys/TestersMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/mapper/sys/UserMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/mapper/sys/UsersMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/example/CodeGenerator.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/example/XAdminApplicationTests.class" afterDir="false" />
+    <list default="true" id="a76d0980-5671-48be-b80e-f1716b7b7cfd" name="变更" comment="对于学生和用户管理接口的实现">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/common/ExceptionEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/common/ExceptionEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/config/MyCorsConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/config/MyCorsConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/config/MybatisPlusConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/config/MybatisPlusConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dto/UserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dto/UserDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dto/UserTokenDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dto/UserTokenDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sys/controller/ClassapplyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sys/controller/ClassapplyController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sys/controller/LabController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sys/controller/LabController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sys/controller/RepairapplyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sys/controller/RepairapplyController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sys/controller/SemestersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sys/controller/SemestersController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sys/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sys/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sys/entity/Students.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sys/entity/Students.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sys/entity/Teachers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sys/entity/Teachers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sys/entity/Testers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sys/entity/Testers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sys/service/IUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sys/service/IUserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sys/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sys/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/sys/controller/ClassapplyController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/sys/controller/ClassapplyController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/sys/controller/RepairapplyController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/sys/controller/RepairapplyController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/sys/controller/SemestersController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/sys/controller/SemestersController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/x-admin.iml" beforeDir="false" afterPath="$PROJECT_DIR$/x-admin.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -313,7 +171,7 @@
       <workItem from="1684640594483" duration="37000" />
       <workItem from="1684640646913" duration="26000" />
       <workItem from="1684640718654" duration="104000" />
-      <workItem from="1684640837638" duration="3460000" />
+      <workItem from="1684640837638" duration="4555000" />
     </task>
     <task id="LOCAL-00001" summary="查看是否部署成功">
       <created>1684057228321</created>
@@ -329,7 +187,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684057428095</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="对于学生和用户管理接口的实现">
+      <created>1684645528199</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1684645528199</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -349,6 +214,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="查看是否部署成功" />
-    <option name="LAST_COMMIT_MESSAGE" value="查看是否部署成功" />
+    <MESSAGE value="对于学生和用户管理接口的实现" />
+    <option name="LAST_COMMIT_MESSAGE" value="对于学生和用户管理接口的实现" />
   </component>
 </project>
