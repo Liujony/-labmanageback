@@ -11,7 +11,7 @@ import lombok.Data;
 public class UserTokenDto {
 
     private String uuid;
-    private String password;
+    private String username;
     private Integer auth;
 
 }

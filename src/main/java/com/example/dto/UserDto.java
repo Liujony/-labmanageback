@@ -11,10 +11,10 @@ import lombok.Data;
 public class UserDto {
 
     private Integer auth=2;
-    private String UUID;
+    private String uuid;
     private String username;
     private String major;
-    private String classname;
+    private String classnum;
     private Integer page=1;
     private Integer num=20;
 }

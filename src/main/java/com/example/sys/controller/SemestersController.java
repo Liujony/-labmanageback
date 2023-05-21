@@ -89,7 +89,7 @@ public class SemestersController {
      */
     @GetMapping("getAllSemester")
     public Result<SemsterDto> getAllSemster(@RequestAttribute Integer auth){
-        if (auth!=1) throw new BizException(ExceptionEnum.NO_AUTHORITY_TO_UPDATE);
+//        if (auth!=1) throw new BizException(ExceptionEnum.NO_AUTHORITY_TO_UPDATE);
         List<Semesters> list = semestersService.list(new QueryWrapper<Semesters>().orderByDesc("semester"));
         SemsterDto semsterDto=new SemsterDto();
         List<String> list1=new ArrayList<>();

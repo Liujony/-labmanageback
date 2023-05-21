@@ -19,6 +19,7 @@ public class MyCorsConfig {
         //允许http://localhost:8888来访问我们。configuration.addAllowedOrigin("*")就是允许任何人访问;
         configuration.addAllowedOrigin("http://localhost:8080");
         configuration.addAllowedOrigin("http://localhost:8889");
+        configuration.addAllowedOrigin("https://carrent.starlightness.tech");
 
 
         configuration.setAllowCredentials(true);//允许cookie等等传过来

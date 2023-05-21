@@ -27,6 +27,7 @@ com\example\sys\mapper\AllclassMapper.class
 com\example\sys\controller\StudentController.class
 com\example\sys\controller\StuApplyLabController.class
 com\example\sys\service\IStuApplyLabService.class
+com\example\dto\DeleteList.class
 com\example\sys\service\impl\KeyvalueServiceImpl.class
 com\example\sys\controller\LabTypeController.class
 com\example\common\BizException.class

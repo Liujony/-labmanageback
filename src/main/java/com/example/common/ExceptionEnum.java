@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 
 @AllArgsConstructor
 public enum ExceptionEnum implements BaseErrorInfoInterface{
+
     // 数据操作错误定义
     SUCCESS("200", "success"),
     //请求参数错误
@@ -26,7 +27,6 @@ public enum ExceptionEnum implements BaseErrorInfoInterface{
     INTERNAL_SERVER_ERROR("500", "Error_InternalServerError"),
     //服务器繁忙
     SERVER_BUSY("503","Error_ServerBusy");
-
     //状态码
     private final String resultCode;
 

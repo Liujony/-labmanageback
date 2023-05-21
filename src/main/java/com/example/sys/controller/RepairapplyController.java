@@ -25,6 +25,7 @@ import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * <p>
@@ -98,7 +99,7 @@ public class RepairapplyController {
         if (auth!=3) throw new BizException(ExceptionEnum.NO_AUTHORITY_TO_UPDATE);
         QueryWrapper<Repairapply> wrapper = new QueryWrapper<Repairapply>().eq("status", "未维修").eq("id",repairapply.getId());
         boolean update = repairapplyService.update(repairapply, wrapper);
-        return update ?Result.success():Result.error("修改失败");
+        return update ?Result.success():Result.error("没有修改成功");
     }
 
     /**
@@ -165,6 +166,9 @@ public class RepairapplyController {
         Repairapply repair = repairapplyMapper.selectById(updateLabRepairDto.getId());
         log.info(repair.getStatus());
         repair.setStatus(updateLabRepairDto.getStatus());
+        if (Objects.equals(updateLabRepairDto.getStatus(), "已维修")){
+            repair.setFinishdate(LocalDate.now());
+        }
         log.info(repair.getStatus());
         repairapplyMapper.updateById(repair);
         return Result.success();

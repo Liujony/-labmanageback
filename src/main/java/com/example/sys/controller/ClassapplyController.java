@@ -7,17 +7,16 @@ import com.example.common.BizException;
 import com.example.common.ExceptionEnum;
 import com.example.common.Result;
 import com.example.dto.examineTApplyDto;
-import com.example.sys.entity.Classapply;
-import com.example.sys.entity.Labapply;
-import com.example.sys.entity.StuApplyLab;
-import com.example.sys.entity.TeacherApplyLab;
+import com.example.sys.entity.*;
 import com.example.sys.mapper.ClassapplyMapper;
+import com.example.sys.mapper.LabapplyMapper;
 import com.example.sys.mapper.StuApplyLabMapper;
 import com.example.sys.mapper.TeacherApplyLabMapper;
 import com.example.sys.service.IClassapplyService;
 import com.example.sys.service.ILabapplyService;
 import com.example.vo.pageVo;
 import lombok.extern.slf4j.Slf4j;
+import org.intellij.lang.annotations.JdkConstants;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -50,6 +49,9 @@ public class ClassapplyController {
 
     @Autowired
     private ClassapplyMapper classapplyMapper;
+
+    @Autowired
+    private LabapplyMapper labapplyMapper;
 
     /**
      * 获取申请列表(教师借用)
@@ -194,8 +196,72 @@ public class ClassapplyController {
         return Result.success(page);
     }
 
-//    @PostMapping("applyStuLab")
-//    public Result<?> applyStuLab(@RequestBody Labapply labapply, @RequestAttribute Integer auth, @RequestAttribute String UUID){
-//
-//    }
+    /**
+     * 申请使用实验室
+     * @param labapply
+     * @param auth
+     * @param UUID
+     * @return
+     * @date 2023-05-19 22:30
+     */
+    @PostMapping("applyStuLab")
+    public Result<?> applyStuLab(@RequestBody Labapply labapply, @RequestAttribute Integer auth, @RequestAttribute String UUID){
+        if (auth!=4) throw new BizException(ExceptionEnum.NO_AUTHORITY_TO_UPDATE);
+        labapply.setStatus("审核中");
+        labapply.setStuuuid(UUID);
+        labapply.setLabid(null);
+        labapplyService.save(labapply);
+        return Result.success();
+    }
+
+    /**
+     * 修改实验室申请单内容
+     * @param labapply
+     * @param auth
+     * @param UUID
+     * @return
+     * @date 2023-05-19 22:47
+     */
+    @PostMapping("updateStuLabApply")
+    public Result<?> updateStuLabApply(@RequestBody Labapply labapply, @RequestAttribute Integer auth, @RequestAttribute String UUID){
+        if (auth!=4) throw new BizException(ExceptionEnum.NO_AUTHORITY_TO_UPDATE);
+        QueryWrapper<Labapply> wrapper = new QueryWrapper<Labapply>().eq("status", "未维修").eq("id", labapply.getId());
+        boolean update = labapplyService.update(labapply, wrapper);
+        return Result.success();
+    }
+
+    /**
+     * 删除申请
+     * @param jsonObject
+     * @param auth
+     * @param UUID
+     * @return
+     */
+    @PostMapping("deleteStuLabApply")
+    public Result<?> deleteStuLabApply(@RequestBody JSONObject jsonObject, @RequestAttribute Integer auth, @RequestAttribute String UUID){
+        if (auth!=4) throw new BizException(ExceptionEnum.NO_AUTHORITY_TO_UPDATE);
+        labapplyService.removeById(jsonObject.getInteger("id"));
+        return Result.success();
+    }
+
+    /**
+     * 更新实验室使用状态
+     * @param jsonObject
+     * @param auth
+     * @param UUID
+     * @return
+     * @date 2023-05-20 15:24
+     */
+    @PostMapping("updateStuLabUseStatus")
+    public Result<?> updateStuLabUseStatus(@RequestBody JSONObject jsonObject, @RequestAttribute Integer auth, @RequestAttribute String UUID){
+        if (auth!=4) throw new BizException(ExceptionEnum.NO_AUTHORITY_TO_UPDATE);
+        QueryWrapper<Labapply> wrapper = new QueryWrapper<Labapply>().eq("status", "审核通过").eq("id",jsonObject.getInteger("id"));
+        Labapply labapply = labapplyService.getOne(wrapper);
+        if (labapply == null) {
+            throw new BizException(ExceptionEnum.BODY_NOT_MATCH);
+        }
+        labapply.setStatus(jsonObject.getString("status"));
+        labapplyMapper.updateById(labapply);
+        return Result.success();
+    }
 }
