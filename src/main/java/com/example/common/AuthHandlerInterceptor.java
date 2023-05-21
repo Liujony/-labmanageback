@@ -40,6 +40,9 @@ public class AuthHandlerInterceptor implements HandlerInterceptor {
         if (!(object instanceof HandlerMethod)) {
             return true;
         }
+        if (httpServletRequest.getCookies() == null) {
+            throw new BizException(ExceptionEnum.TOKEN_INVALID);
+        }
         Cookie[] cookies = httpServletRequest.getCookies();
         String token="";
         for (Cookie cookie : cookies) {

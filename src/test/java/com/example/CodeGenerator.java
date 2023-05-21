@@ -12,13 +12,13 @@ public class CodeGenerator {
     public static void main(String[] args) {
 
 //        String url = "jdbc:mysql://127.0.0.1:3306/我的";
-        String url = "jdbc:mysql://106.13.236.41:10028/labmanage";
+        String url = "jdbc:mysql:///labmanage";
         String username = "root";
 //        String password = "123456";
         String password = "labmanageDatabase";
         String moudleName = "sys";
         String mapperLocation = "D:\\A2暂存\\IDEA\\spring项目\\x-admin\\src\\main\\resources\\mapper\\" + moudleName;
-        String tableNames = "allclass,LabType,RepairApply,StuApplyLab,Students,TeacherApplyLab,Teachers,Testers"; //用逗号分割
+        String tableNames = "LabInUse"; //用逗号分割
 
 
         FastAutoGenerator.create(url, username, password)

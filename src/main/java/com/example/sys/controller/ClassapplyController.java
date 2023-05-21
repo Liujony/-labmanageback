@@ -59,7 +59,7 @@ public class ClassapplyController {
      * @param auth
      * @return
      */
-    @GetMapping("getTApply")
+    @PostMapping("getTApply")
     public Result<Page<TeacherApplyLab>> getApply(@RequestBody pageVo pageVo, @RequestAttribute Integer auth){
         if (auth!=1) throw new BizException(ExceptionEnum.NO_AUTHORITY_TO_UPDATE);
         if (pageVo.getPage()==0) pageVo.setPage(1);
@@ -89,7 +89,7 @@ public class ClassapplyController {
      * @param auth
      * @return
      */
-    @GetMapping("getSApply")
+    @PostMapping("getSApply")
     public Result<?> getSApply(@RequestBody pageVo pageVo, @RequestAttribute Integer auth){
         if (auth!=1) throw new BizException(ExceptionEnum.NO_AUTHORITY_TO_UPDATE);
         if (pageVo.getPage()==0) pageVo.setPage(1);
@@ -120,7 +120,7 @@ public class ClassapplyController {
      * @param UUID
      * @return
      */
-    @GetMapping("getClassApply")
+    @PostMapping("getClassApply")
     public Result<?> getClassApply(@RequestBody pageVo pageVo,@RequestAttribute Integer auth,@RequestAttribute String UUID){
         if (auth!=3) throw new BizException(ExceptionEnum.NO_AUTHORITY_TO_UPDATE);
         if (pageVo.getPage()==0) pageVo.setPage(1);
@@ -175,7 +175,7 @@ public class ClassapplyController {
     public Result<?> deleteClassApply(@RequestBody JSONObject eq, @RequestAttribute Integer auth){
         if (auth!=3) throw new BizException(ExceptionEnum.NO_AUTHORITY_TO_UPDATE);
         boolean flag = classapplyService.removeById((Serializable) eq.get("id"));
-        return flag?Result.success():Result.error("修改失败！");
+        return Result.success();
     }
 
     /**
@@ -186,7 +186,7 @@ public class ClassapplyController {
      * @return
      * @date 2023-05-16 21:46
      */
-    @GetMapping("getStuLabApply")
+    @PostMapping("getStuLabApply")
     public Result<?> getStuLabApply(@RequestBody pageVo pageVo, @RequestAttribute Integer auth, @RequestAttribute String UUID){
         if (auth!=4) throw new BizException(ExceptionEnum.NO_AUTHORITY_TO_UPDATE);
         if (pageVo.getPage()==0) pageVo.setPage(1);

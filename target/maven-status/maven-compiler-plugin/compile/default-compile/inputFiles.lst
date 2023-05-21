@@ -5,6 +5,7 @@ D:\IDEA_WorkSpace\x-admin - 副本 - 副本\src\main\java\com\example\sys\mapper
 D:\IDEA_WorkSpace\x-admin - 副本 - 副本\src\main\java\com\example\sys\service\ITestersService.java
 D:\IDEA_WorkSpace\x-admin - 副本 - 副本\src\main\java\com\example\dto\examineTApplyDto.java
 D:\IDEA_WorkSpace\x-admin - 副本 - 副本\src\main\java\com\example\sys\controller\RepairController.java
+D:\IDEA_WorkSpace\x-admin - 副本 - 副本\src\main\java\com\example\sys\service\ILabInUseService.java
 D:\IDEA_WorkSpace\x-admin - 副本 - 副本\src\main\java\com\example\sys\service\impl\TestersServiceImpl.java
 D:\IDEA_WorkSpace\x-admin - 副本 - 副本\src\main\java\com\example\config\MyCorsConfig.java
 D:\IDEA_WorkSpace\x-admin - 副本 - 副本\src\main\java\com\example\sys\entity\Lab.java
@@ -48,6 +49,7 @@ D:\IDEA_WorkSpace\x-admin - 副本 - 副本\src\main\java\com\example\vo\userVo.
 D:\IDEA_WorkSpace\x-admin - 副本 - 副本\src\main\java\com\example\sys\mapper\AllclassMapper.java
 D:\IDEA_WorkSpace\x-admin - 副本 - 副本\src\main\java\com\example\sys\service\ITeacherApplyLabService.java
 D:\IDEA_WorkSpace\x-admin - 副本 - 副本\src\main\java\com\example\sys\entity\Students.java
+D:\IDEA_WorkSpace\x-admin - 副本 - 副本\src\main\java\com\example\sys\service\impl\LabInUseServiceImpl.java
 D:\IDEA_WorkSpace\x-admin - 副本 - 副本\src\main\java\com\example\sys\controller\UserController.java
 D:\IDEA_WorkSpace\x-admin - 副本 - 副本\src\main\java\com\example\sys\mapper\ClassapplyMapper.java
 D:\IDEA_WorkSpace\x-admin - 副本 - 副本\src\main\java\com\example\sys\service\IClassapplyService.java
@@ -65,6 +67,7 @@ D:\IDEA_WorkSpace\x-admin - 副本 - 副本\src\main\java\com\example\sys\contro
 D:\IDEA_WorkSpace\x-admin - 副本 - 副本\src\main\java\com\example\sys\mapper\RepairapplyMapper.java
 D:\IDEA_WorkSpace\x-admin - 副本 - 副本\src\main\java\com\example\sys\service\impl\SemestersServiceImpl.java
 D:\IDEA_WorkSpace\x-admin - 副本 - 副本\src\main\java\com\example\sys\entity\Labapply.java
+D:\IDEA_WorkSpace\x-admin - 副本 - 副本\src\main\java\com\example\sys\mapper\LabInUseMapper.java
 D:\IDEA_WorkSpace\x-admin - 副本 - 副本\src\main\java\com\example\sys\service\impl\StudentServiceImpl.java
 D:\IDEA_WorkSpace\x-admin - 副本 - 副本\src\main\java\com\example\sys\mapper\StuApplyLabMapper.java
 D:\IDEA_WorkSpace\x-admin - 副本 - 副本\src\main\java\com\example\config\MybatisPlusConfig.java
@@ -84,6 +87,7 @@ D:\IDEA_WorkSpace\x-admin - 副本 - 副本\src\main\java\com\example\sys\contro
 D:\IDEA_WorkSpace\x-admin - 副本 - 副本\src\main\java\com\example\sys\entity\Classapply.java
 D:\IDEA_WorkSpace\x-admin - 副本 - 副本\src\main\java\com\example\sys\mapper\LabMapper.java
 D:\IDEA_WorkSpace\x-admin - 副本 - 副本\src\main\java\com\example\sys\mapper\LabapplyMapper.java
+D:\IDEA_WorkSpace\x-admin - 副本 - 副本\src\main\java\com\example\sys\entity\LabInUse.java
 D:\IDEA_WorkSpace\x-admin - 副本 - 副本\src\main\java\com\example\sys\mapper\RepairMapper.java
 D:\IDEA_WorkSpace\x-admin - 副本 - 副本\src\main\java\com\example\sys\service\IKeyvalueService.java
 D:\IDEA_WorkSpace\x-admin - 副本 - 副本\src\main\java\com\example\sys\service\impl\LabapplyServiceImpl.java
@@ -91,6 +95,7 @@ D:\IDEA_WorkSpace\x-admin - 副本 - 副本\src\main\java\com\example\vo\labAppl
 D:\IDEA_WorkSpace\x-admin - 副本 - 副本\src\main\java\com\example\sys\service\IRepairapplyService.java
 D:\IDEA_WorkSpace\x-admin - 副本 - 副本\src\main\java\com\example\common\Result.java
 D:\IDEA_WorkSpace\x-admin - 副本 - 副本\src\main\java\com\example\sys\controller\RepairapplyController.java
+D:\IDEA_WorkSpace\x-admin - 副本 - 副本\src\main\java\com\example\sys\controller\LabInUseController.java
 D:\IDEA_WorkSpace\x-admin - 副本 - 副本\src\main\java\com\example\sys\controller\StudentsController.java
 D:\IDEA_WorkSpace\x-admin - 副本 - 副本\src\main\java\com\example\sys\service\ISemestersService.java
 D:\IDEA_WorkSpace\x-admin - 副本 - 副本\src\main\java\com\example\util\TokenUtil.java

@@ -60,7 +60,7 @@ public class RepairapplyController {
      * @param auth
      * @return
      */
-    @GetMapping("getMyApply")
+    @PostMapping("getMyApply")
     public Result<?> getMyApply(@RequestBody pageVo pageVo, @RequestAttribute String UUID, @RequestAttribute Integer auth){
         if (auth!=3) throw new BizException(ExceptionEnum.NO_AUTHORITY_TO_UPDATE);
         QueryWrapper<Repairapply> wrapper = new QueryWrapper<Repairapply>().eq("teacheruuid", UUID);
@@ -99,7 +99,7 @@ public class RepairapplyController {
         if (auth!=3) throw new BizException(ExceptionEnum.NO_AUTHORITY_TO_UPDATE);
         QueryWrapper<Repairapply> wrapper = new QueryWrapper<Repairapply>().eq("status", "未维修").eq("id",repairapply.getId());
         boolean update = repairapplyService.update(repairapply, wrapper);
-        return update ?Result.success():Result.error("没有修改成功");
+        return Result.success();
     }
 
     /**
@@ -112,7 +112,7 @@ public class RepairapplyController {
     public Result<?> deleteMyApply(@RequestBody JSONObject jsonObject, @RequestAttribute Integer auth){
         if (auth!=3) throw new BizException(ExceptionEnum.NO_AUTHORITY_TO_UPDATE);
         int id = repairapplyMapper.deleteById((Serializable) jsonObject.get("id"));
-        return id==1?Result.success():Result.error("删除失败");
+        return Result.success();
     }
 
     /**
@@ -141,7 +141,7 @@ public class RepairapplyController {
      * @param UUID
      * @return
      */
-    @GetMapping("getLabRepair")
+    @PostMapping("getLabRepair")
     public Result<?> getLabRepair(@RequestBody pageVo pageVo, @RequestAttribute Integer auth, @RequestAttribute String UUID){
         log.info("test");
         if (auth!=2) throw new BizException(ExceptionEnum.NO_AUTHORITY_TO_UPDATE);

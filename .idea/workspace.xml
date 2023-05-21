@@ -9,8 +9,34 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a76d0980-5671-48be-b80e-f1716b7b7cfd" name="变更" comment="对于学生和用户管理接口的实现">
+    <list default="true" id="a76d0980-5671-48be-b80e-f1716b7b7cfd" name="变更" comment="cookie的修改">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/sys/controller/LabInUseController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/sys/entity/LabInUse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/sys/mapper/LabInUseMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/sys/service/ILabInUseService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/sys/service/impl/LabInUseServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/sys/LabInUseMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/common/AuthHandlerInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/common/AuthHandlerInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/common/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/common/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/common/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/common/Result.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sys/controller/ClassapplyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sys/controller/ClassapplyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sys/controller/LabController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sys/controller/LabController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sys/controller/RepairapplyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sys/controller/RepairapplyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sys/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sys/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/CodeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/CodeGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/common/AuthHandlerInterceptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/common/AuthHandlerInterceptor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/common/GlobalExceptionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/common/GlobalExceptionHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/common/Result.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/common/Result.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/sys/controller/ClassapplyController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/sys/controller/ClassapplyController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/sys/controller/LabController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/sys/controller/LabController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/sys/controller/RepairapplyController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/sys/controller/RepairapplyController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/sys/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/sys/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/CodeGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/example/CodeGenerator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/x-admin.iml" beforeDir="false" afterPath="$PROJECT_DIR$/x-admin.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +101,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/mapper/sys" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -99,15 +125,15 @@
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\IDEA_WorkSpace\x-admin - 副本 - 副本\src\main\resources\mapper\sys" />
+      <recent name="D:\IDEA_WorkSpace\x-admin - 副本 - 副本\src\main\java\com\example\sys\service" />
       <recent name="D:\IDEA_WorkSpace\x-admin - 副本 - 副本\src\main\java\com\example\sys\mapper" />
       <recent name="D:\IDEA_WorkSpace\x-admin - 副本 - 副本\src\main\java\com\example\sys\entity" />
       <recent name="D:\IDEA_WorkSpace\x-admin - 副本 - 副本\src\main\java\com\example\sys\controller" />
-      <recent name="D:\IDEA_WorkSpace\x-admin\x-admin\src\main\java\com\example" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.common" />
       <recent name="com.example.vo" />
       <recent name="com.example.config" />
-      <recent name="com.example.common" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -171,7 +197,7 @@
       <workItem from="1684640594483" duration="37000" />
       <workItem from="1684640646913" duration="26000" />
       <workItem from="1684640718654" duration="104000" />
-      <workItem from="1684640837638" duration="4555000" />
+      <workItem from="1684640837638" duration="17348000" />
     </task>
     <task id="LOCAL-00001" summary="查看是否部署成功">
       <created>1684057228321</created>
@@ -194,7 +220,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684645528199</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="cookie的修改">
+      <created>1684650355604</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1684650355604</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -215,6 +248,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="查看是否部署成功" />
     <MESSAGE value="对于学生和用户管理接口的实现" />
-    <option name="LAST_COMMIT_MESSAGE" value="对于学生和用户管理接口的实现" />
+    <MESSAGE value="cookie的修改" />
+    <option name="LAST_COMMIT_MESSAGE" value="cookie的修改" />
   </component>
 </project>

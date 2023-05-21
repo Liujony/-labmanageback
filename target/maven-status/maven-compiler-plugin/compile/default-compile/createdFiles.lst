@@ -4,6 +4,7 @@ com\example\XAdminApplication.class
 com\example\dto\UserDto.class
 com\example\sys\mapper\LabTypeMapper.class
 com\example\sys\controller\AllclassController.class
+com\example\sys\service\ILabInUseService.class
 com\example\sys\entity\Keyvalue.class
 com\example\sys\service\impl\AllclassServiceImpl.class
 com\example\sys\entity\Repairapply.class
@@ -11,6 +12,7 @@ com\example\sys\service\ITestersService.class
 com\example\config\MyCorsConfig.class
 com\example\sys\entity\Teacher.class
 com\example\sys\controller\SemestersController.class
+com\example\sys\controller\LabInUseController.class
 com\example\common\AuthHandlerInterceptor.class
 com\example\sys\entity\TeacherApplyLab.class
 com\example\sys\service\ILabTypeService.class
@@ -56,6 +58,7 @@ com\example\dto\UpdateLabRepairDto.class
 com\example\sys\entity\Semesters.class
 com\example\sys\mapper\LabapplyMapper.class
 com\example\sys\service\IRepairapplyService.class
+com\example\sys\service\impl\LabInUseServiceImpl.class
 com\example\sys\mapper\TeacherApplyLabMapper.class
 com\example\sys\entity\Lab.class
 com\example\sys\service\impl\StudentsServiceImpl.class
@@ -97,11 +100,13 @@ com\example\common\Result.class
 com\example\sys\service\ISemestersService.class
 com\example\sys\controller\UserController.class
 com\example\sys\entity\User.class
+com\example\sys\mapper\LabInUseMapper.class
 com\example\sys\service\IAllclassService.class
 com\example\dto\UserTokenDto.class
 com\example\sys\entity\Teachers.class
 com\example\util\RedisConstant.class
 com\example\util\TokenUtil.class
+com\example\sys\entity\LabInUse.class
 com\example\sys\mapper\RepairMapper.class
 com\example\sys\mapper\UserMapper.class
 com\example\sys\mapper\TestersMapper.class

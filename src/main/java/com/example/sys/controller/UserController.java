@@ -1,5 +1,8 @@
 package com.example.sys.controller;
 
+import cn.hutool.core.collection.CollUtil;
+import cn.hutool.poi.excel.ExcelReader;
+import cn.hutool.poi.excel.ExcelUtil;
 import com.alibaba.fastjson2.JSONObject;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
@@ -12,6 +15,7 @@ import com.example.dto.UserDto;
 import com.example.dto.UserTokenDto;
 import com.example.sys.entity.Student;
 import com.example.sys.entity.Teacher;
+import com.example.sys.entity.Teachers;
 import com.example.sys.entity.User;
 import com.example.sys.mapper.StudentMapper;
 import com.example.sys.service.IStudentService;
@@ -28,6 +32,8 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.io.InputStream;
 import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -83,7 +89,7 @@ public class UserController {
                 .httpOnly(true)
                 .secure(true)
                 .path("/")
-                .maxAge(3600)
+                .maxAge(360000)
                 .sameSite("None")
                 .build();
         response.setHeader(HttpHeaders.SET_COOKIE,cookie.toString());
@@ -97,7 +103,7 @@ public class UserController {
      * @return
      * @date 2023-05-20 19:40
      */
-    @PostMapping("getUsers")
+        @PostMapping("getUsers")
     public Result<?> getUsers(@RequestBody UserDto userDto, @RequestAttribute Integer auth){
         if (auth!=1) throw new BizException(ExceptionEnum.NO_AUTHORITY_TO_UPDATE);
         if (userDto.getPage()==null) {
@@ -196,6 +202,12 @@ public class UserController {
         return str;
     }
 
+    /**
+     * md5加密密码
+     * @param password
+     * @return
+     * @throws NoSuchAlgorithmException
+     */
     public String getMD5(String password) throws NoSuchAlgorithmException {
 //        String password = "123456";
         MessageDigest md5 = MessageDigest.getInstance("MD5");
@@ -257,8 +269,8 @@ public class UserController {
             if (jsonObject.getString("major") != null) {
                 student.setMajor(jsonObject.getString("major"));
             }
-            if (jsonObject.getString("class") != null) {
-                student.setClassnum(jsonObject.getString("class"));
+            if (jsonObject.getString("classnum") != null) {
+                student.setClassnum(jsonObject.getString("classnum"));
             }
             studentService.update(student,new QueryWrapper<Student>().eq("uuid",uuid));
         }
@@ -288,9 +300,65 @@ public class UserController {
         return Result.success();
     }
 
-//    @PostMapping("importUsers")
-//    public Result<?> importUsers(@RequestParam("users") MultipartFile file, @RequestParam("auth") Integer authname,@RequestAttribute Integer auth){
-//        if (auth!=1) throw new BizException(ExceptionEnum.NO_AUTHORITY_TO_UPDATE);
-//
-//    }
+    /**
+     * 批量导入
+     * @param file
+     * @param authname
+     * @param auth
+     * @return
+     * @throws IOException
+     * @throws NoSuchAlgorithmException
+     * @date 2023-05-21 23:07
+     */
+    @PostMapping("importUsers")
+    public Result<?> importUsers(@RequestParam("users") MultipartFile file, @RequestParam("auth") Integer authname, @RequestAttribute Integer auth) throws IOException, NoSuchAlgorithmException {
+        if (auth!=1) throw new BizException(ExceptionEnum.NO_AUTHORITY_TO_UPDATE);
+        /**
+         * username、title、role
+         * username、classnum、major
+         */
+        InputStream inputStream=file.getInputStream();
+        ExcelReader reader= ExcelUtil.getReader(inputStream);
+        List<List<Object>> list=reader.read(1);
+        if (authname==4){
+            List<Student> students= CollUtil.newArrayList();
+            List<User> users=CollUtil.newArrayList();
+            for (List<Object> row:list){
+                String randomUUID = getRandomUUID("2020", 8);
+                Student student=new Student();
+                User user=new User();
+                user.setUsername(row.get(0).toString());
+                user.setAuth(authname);
+                user.setPassword(getMD5("scau"));
+                user.setUuid(randomUUID);
+                student.setMajor(row.get(1).toString());
+                student.setClassnum(row.get(2).toString());
+                student.setUuid(randomUUID);
+                students.add(student);
+                users.add(user);
+            }
+            userService.saveBatch(users);
+            studentService.saveBatch(students);
+        }else {
+            List<Teacher> teachers=CollUtil.newArrayList();
+            List<User> users=CollUtil.newArrayList();
+            for (List<Object> row:list){
+                String randomUUID = getRandomUUID("3000", 4);
+                Teacher teacher=new Teacher();
+                User user=new User();
+                user.setUsername(row.get(0).toString());
+                user.setAuth(authname);
+                user.setPassword(getMD5("scau"));
+                user.setUuid(randomUUID);
+                teacher.setTitle(row.get(1).toString());
+                teacher.setRole(row.get(2).toString());
+                teacher.setUuid(randomUUID);
+                teachers.add(teacher);
+                users.add(user);
+            }
+            teacherService.saveBatch(teachers);
+            userService.saveBatch(users);
+        }
+        return Result.success();
+    }
 }
