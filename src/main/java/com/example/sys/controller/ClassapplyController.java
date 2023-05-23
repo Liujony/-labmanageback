@@ -225,9 +225,9 @@ public class ClassapplyController {
     @PostMapping("updateStuLabApply")
     public Result<?> updateStuLabApply(@RequestBody Labapply labapply, @RequestAttribute Integer auth, @RequestAttribute String UUID){
         if (auth!=4) throw new BizException(ExceptionEnum.NO_AUTHORITY_TO_UPDATE);
-        QueryWrapper<Labapply> wrapper = new QueryWrapper<Labapply>().eq("status", "未维修").eq("id", labapply.getId());
+        QueryWrapper<Labapply> wrapper = new QueryWrapper<Labapply>().eq("status", "审核中").eq("id", labapply.getId());
         boolean update = labapplyService.update(labapply, wrapper);
-        return Result.success();
+        return update?Result.success():Result.error("500","修改失败");
     }
 
     /**
