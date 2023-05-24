@@ -2,6 +2,8 @@ package com.example.sys.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
+import lombok.Data;
+
 import java.io.Serializable;
 
 /**
@@ -12,6 +14,7 @@ import java.io.Serializable;
  * @author wow
  * @since 2023-05-10
  */
+@Data
 public class Lab implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -24,6 +27,8 @@ public class Lab implements Serializable {
     private String type;
 
     private Integer cap;
+
+    private String roomid;
 
     private String testeruuid;
 

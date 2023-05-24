@@ -13,6 +13,7 @@ com\example\config\MyCorsConfig.class
 com\example\sys\entity\Teacher.class
 com\example\sys\controller\SemestersController.class
 com\example\sys\controller\LabInUseController.class
+com\example\vo\GetClassByDay.class
 com\example\common\AuthHandlerInterceptor.class
 com\example\sys\entity\TeacherApplyLab.class
 com\example\sys\service\ILabTypeService.class

@@ -10,14 +10,10 @@ import com.example.sys.entity.Keyvalue;
 import com.example.sys.entity.Semesters;
 import com.example.sys.service.IKeyvalueService;
 import com.example.sys.service.ISemestersService;
-import com.example.util.RedisConstant;
 import com.example.util.RedisUtil;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.cache.CacheProperties;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.stereotype.Controller;
 
-import javax.xml.crypto.dsig.keyinfo.KeyValue;
 import java.util.*;
 
 /**
@@ -50,7 +46,7 @@ public class SemestersController {
      * @return
      */
     @GetMapping("getCurrentSemester")
-    public Result<Map> getCurrentSemster(@RequestAttribute Integer auth){
+    public Result<Map> getCurrentSemster(){
 //        if (auth!=1) throw new BizException(ExceptionEnum.NO_AUTHORITY_TO_UPDATE);
         Keyvalue keyvalue=keyvalueService.getCurrentSemster();
         Map<String,String> map=new HashMap<>();

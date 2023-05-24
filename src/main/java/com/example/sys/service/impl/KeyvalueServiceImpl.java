@@ -34,12 +34,9 @@ public class KeyvalueServiceImpl extends ServiceImpl<KeyvalueMapper, Keyvalue> i
 
     @Override
     public Keyvalue getCurrentSemster() {
-        String key= RedisConstant.Key_CODE+"currentSemester";
-        if (redisUtil.hasKey(key)){
-            return (Keyvalue) redisUtil.get(key);
-        }
+//        String key= RedisConstant.Key_CODE+"currentSemester";
         Keyvalue keyvalue = keyvalueMapper.selectById("currentSemester");
-        redisUtil.set(key,keyvalue,RedisConstant.PAGE_EXPIRE_TIME);
+//        redisUtil.set(key,keyvalue,RedisConstant.PAGE_EXPIRE_TIME);
         return keyvalue;
     }
 
