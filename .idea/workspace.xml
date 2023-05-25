@@ -11,8 +11,12 @@
   <component name="ChangeListManager">
     <list default="true" id="a76d0980-5671-48be-b80e-f1716b7b7cfd" name="变更" comment="修改">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sys/controller/RepairapplyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sys/controller/RepairapplyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sys/controller/LabController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sys/controller/LabController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sys/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sys/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/sys/controller/LabController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/sys/controller/LabController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/sys/controller/RepairapplyController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/sys/controller/RepairapplyController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,7 +168,7 @@
       <workItem from="1684640646913" duration="26000" />
       <workItem from="1684640718654" duration="104000" />
       <workItem from="1684640837638" duration="28605000" />
-      <workItem from="1684942121643" duration="4936000" />
+      <workItem from="1684942121643" duration="7676000" />
     </task>
     <task id="LOCAL-00001" summary="查看是否部署成功">
       <created>1684057228321</created>
@@ -215,7 +219,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684942308699</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="修改">
+      <created>1684992712899</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1684992712899</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

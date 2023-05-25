@@ -48,10 +48,10 @@ public class LabController {
         if (auth!=1) throw new BizException(ExceptionEnum.NO_AUTHORITY_TO_UPDATE);
         String semester = jsonObject.getString("semester");
         String labtype = jsonObject.getString("labtype");
-        String startweek = jsonObject.getString("startweek");
-        String endweek = jsonObject.getString("endweek");
+        Integer startweek = jsonObject.getInteger("startweek");
+        Integer endweek = jsonObject.getInteger("endweek");
         String section = jsonObject.getString("section");
-        String day = jsonObject.getString("day");
+        Integer day = jsonObject.getInteger("day");
         String stunum = jsonObject.getString("stunum");
         QueryWrapper<LabInUse> labInUseQueryWrapper = new QueryWrapper<LabInUse>()
                 .eq("semester", semester)
