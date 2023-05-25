@@ -97,7 +97,7 @@ public class RepairapplyController {
     @PostMapping("updateMyApply")
     public Result<?> updateMyApply(@RequestBody Repairapply repairapply,@RequestAttribute Integer auth){
         if (auth!=3) throw new BizException(ExceptionEnum.NO_AUTHORITY_TO_UPDATE);
-        QueryWrapper<Repairapply> wrapper = new QueryWrapper<Repairapply>().eq("status", "未维修").eq("id",repairapply.getId());
+        QueryWrapper<Repairapply> wrapper = new QueryWrapper<Repairapply>().eq("status", "维修申报中").eq("id",repairapply.getId());
         boolean update = repairapplyService.update(repairapply, wrapper);
         return Result.success();
     }
