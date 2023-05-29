@@ -63,10 +63,14 @@ public class LabController {
         for (LabInUse labInUse: labInUses) {
             labIds.add(labInUse.getLabid());
         }
-        QueryWrapper<Lab> labQueryWrapper = new QueryWrapper<Lab>()
-                .eq("type", labtype)
+        QueryWrapper<Lab> labQueryWrapper = new QueryWrapper<Lab>();
+        if (labIds.isEmpty()){
+            labQueryWrapper.eq("type", labtype);
+        }else{
+            labQueryWrapper.eq("type", labtype)
 //                .gt("cap", stunum)
-                .notIn("id", labIds);
+                    .notIn("id", labIds);
+        }
         List<Lab> labs = labService.list(labQueryWrapper);
         return Result.success(labs);
     }

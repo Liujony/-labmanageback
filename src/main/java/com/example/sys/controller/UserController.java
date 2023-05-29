@@ -31,6 +31,7 @@ import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.InputStream;
@@ -94,6 +95,19 @@ public class UserController {
                 .build();
         response.setHeader(HttpHeaders.SET_COOKIE,cookie.toString());
         return Result.success(user);
+    }
+
+    /**
+     * 登出功能
+     * @param response
+     */
+    @RequestMapping(value = "logout", method = RequestMethod.GET)
+    public Result<?> removeCookie(HttpServletResponse response){
+        Cookie cookie = new Cookie("TOKEN",null);
+        cookie.setPath("/");
+        cookie.setMaxAge(0);
+        response.addCookie(cookie);
+        return Result.success();
     }
 
     /**

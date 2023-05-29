@@ -9,10 +9,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a76d0980-5671-48be-b80e-f1716b7b7cfd" name="变更" comment="修改-5">
+    <list default="true" id="a76d0980-5671-48be-b80e-f1716b7b7cfd" name="变更" comment="修改-6">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/config/AuthWebMvcConfigurer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/config/AuthWebMvcConfigurer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sys/controller/LabController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sys/controller/LabController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sys/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sys/controller/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/config/AuthWebMvcConfigurer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/config/AuthWebMvcConfigurer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/sys/controller/LabController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/sys/controller/LabController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/sys/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/sys/controller/UserController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -180,7 +184,7 @@
       <workItem from="1684640718654" duration="104000" />
       <workItem from="1684640837638" duration="28605000" />
       <workItem from="1684942121643" duration="7983000" />
-      <workItem from="1685258978322" duration="9496000" />
+      <workItem from="1685258978322" duration="12723000" />
     </task>
     <task id="LOCAL-00001" summary="查看是否部署成功">
       <created>1684057228321</created>
@@ -266,7 +270,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685346017624</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="修改-6">
+      <created>1685368357461</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1685368357462</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -295,6 +306,7 @@
     <MESSAGE value="修改-3" />
     <MESSAGE value="修改-4" />
     <MESSAGE value="修改-5" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改-5" />
+    <MESSAGE value="修改-6" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改-6" />
   </component>
 </project>
