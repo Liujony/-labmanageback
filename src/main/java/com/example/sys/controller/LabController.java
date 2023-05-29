@@ -65,7 +65,7 @@ public class LabController {
         }
         QueryWrapper<Lab> labQueryWrapper = new QueryWrapper<Lab>()
                 .eq("type", labtype)
-                .gt("cap", stunum)
+//                .gt("cap", stunum)
                 .notIn("id", labIds);
         List<Lab> labs = labService.list(labQueryWrapper);
         return Result.success(labs);

@@ -9,16 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a76d0980-5671-48be-b80e-f1716b7b7cfd" name="变更" comment="修改-3">
+    <list default="true" id="a76d0980-5671-48be-b80e-f1716b7b7cfd" name="变更" comment="修改-4">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sys/controller/ClassapplyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sys/controller/ClassapplyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sys/controller/LabController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sys/controller/LabController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sys/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sys/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sys/entity/Labapply.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sys/entity/Labapply.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sys/entity/StuApplyLab.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sys/entity/StuApplyLab.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/sys/controller/ClassapplyController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/sys/controller/ClassapplyController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/sys/entity/Labapply.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/sys/entity/Labapply.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/sys/entity/StuApplyLab.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/sys/entity/StuApplyLab.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,8 +84,10 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelOrder2" value="2" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -183,7 +180,7 @@
       <workItem from="1684640718654" duration="104000" />
       <workItem from="1684640837638" duration="28605000" />
       <workItem from="1684942121643" duration="7983000" />
-      <workItem from="1685258978322" duration="4806000" />
+      <workItem from="1685258978322" duration="6871000" />
     </task>
     <task id="LOCAL-00001" summary="查看是否部署成功">
       <created>1684057228321</created>
@@ -255,7 +252,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685262108582</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="修改-4">
+      <created>1685343971832</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1685343971832</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -282,6 +286,7 @@
     <MESSAGE value="getClassByDay接口的实现" />
     <MESSAGE value="修改" />
     <MESSAGE value="修改-3" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改-3" />
+    <MESSAGE value="修改-4" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改-4" />
   </component>
 </project>
