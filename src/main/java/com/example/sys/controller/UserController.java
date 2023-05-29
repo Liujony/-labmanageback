@@ -87,7 +87,7 @@ public class UserController {
         String token=tokenUtil.getToken(user.getUuid(),user.getAuth());
         ResponseCookie cookie=ResponseCookie.from("TOKEN",token)
                 .httpOnly(true)
-                .secure(false)
+                .secure(true)
                 .path("/")
                 .maxAge(360000)
                 .sameSite("None")
@@ -157,7 +157,7 @@ public class UserController {
         if (authKey==4){
             Student student=new Student();
 //            User user=new User();
-            student.setClassnum(jsonObject.getString("class"));
+            student.setClassnum(jsonObject.getString("classnum"));
             student.setMajor(jsonObject.getString("major"));
             String uuid = getRandomUUID("2020", 8);
             student.setUuid(uuid);
@@ -311,7 +311,7 @@ public class UserController {
      * @date 2023-05-21 23:07
      */
     @PostMapping("importUsers")
-    public Result<?> importUsers(@RequestParam("users") MultipartFile file, @RequestParam("auth") Integer authname, @RequestAttribute Integer auth) throws IOException, NoSuchAlgorithmException {
+    public Result<?> importUsers(@RequestParam("file") MultipartFile file, @RequestParam("auth") Integer authname, @RequestAttribute Integer auth) throws IOException, NoSuchAlgorithmException {
         if (auth!=1) throw new BizException(ExceptionEnum.NO_AUTHORITY_TO_UPDATE);
         /**
          * username、title、role
