@@ -8,10 +8,7 @@ import com.example.common.ExceptionEnum;
 import com.example.common.Result;
 import com.example.dto.examineTApplyDto;
 import com.example.sys.entity.*;
-import com.example.sys.mapper.ClassapplyMapper;
-import com.example.sys.mapper.LabapplyMapper;
-import com.example.sys.mapper.StuApplyLabMapper;
-import com.example.sys.mapper.TeacherApplyLabMapper;
+import com.example.sys.mapper.*;
 import com.example.sys.service.IClassapplyService;
 import com.example.sys.service.ILabapplyService;
 import com.example.vo.pageVo;
@@ -20,6 +17,7 @@ import org.intellij.lang.annotations.JdkConstants;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.annotation.Resource;
 import java.io.Serializable;
 import java.util.List;
 
@@ -108,10 +106,13 @@ public class ClassapplyController {
     @PostMapping("examineSApply")
     public Result<?> examineSApply(@RequestBody examineTApplyDto examineTApplyDto, @RequestAttribute Integer auth){
         if (auth!=1) throw new BizException(ExceptionEnum.NO_AUTHORITY_TO_UPDATE);
-        log.info(String.valueOf(examineTApplyDto.getID()));
+        log.info(String.valueOf(examineTApplyDto));
         labapplyService.updateById(examineTApplyDto);
         return Result.success();
     }
+
+    @Resource
+    private TeachLabMapper teachLabMapper;
 
     /**
      * 获取当前老师所申请的实验室
@@ -125,9 +126,9 @@ public class ClassapplyController {
         if (auth!=3) throw new BizException(ExceptionEnum.NO_AUTHORITY_TO_UPDATE);
         if (pageVo.getPage()==0) pageVo.setPage(1);
         if (pageVo.getNum()==0) pageVo.setNum(20);
-        QueryWrapper<Classapply> wrapper = new QueryWrapper<Classapply>().eq("teacheruuid", UUID);
-        Page<Classapply> page=new Page<>(pageVo.getPage(),pageVo.getNum());
-        Page<Classapply> selectPage = classapplyMapper.selectPage(page, wrapper);
+        QueryWrapper<TeachLab> wrapper = new QueryWrapper<TeachLab>().eq("teacheruuid", UUID);
+        Page<TeachLab> page=new Page<>(pageVo.getPage(),pageVo.getNum());
+        Page<TeachLab> selectPage = teachLabMapper.selectPage(page, wrapper);
         return Result.success(selectPage);
     }
 

@@ -31,7 +31,7 @@ public class ClassapplyServiceImpl extends ServiceImpl<ClassapplyMapper, Classap
         Classapply classapply = classapplyMapper.selectById(examineTApplyDto.getID());
         classapply.setStatus(examineTApplyDto.getStatus());
         if (examineTApplyDto.getStatus().equals("通过"))
-            classapply.setLabid(examineTApplyDto.getLab());
+            classapply.setLabid(examineTApplyDto.getLabid());
         classapplyMapper.updateById(classapply);
     }
 }

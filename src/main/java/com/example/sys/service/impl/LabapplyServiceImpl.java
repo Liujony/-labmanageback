@@ -29,8 +29,8 @@ public class LabapplyServiceImpl extends ServiceImpl<LabapplyMapper, Labapply> i
     public void updateById(examineTApplyDto examineTApplyDto) {
         Labapply classapply = labapplyMapper.selectById(examineTApplyDto.getID());
         classapply.setStatus(examineTApplyDto.getStatus());
-        if (examineTApplyDto.getStatus().equals("通过"))
-            classapply.setLabid(examineTApplyDto.getLab());
+        if (examineTApplyDto.getStatus().equals("审核通过"))
+            classapply.setLabid(examineTApplyDto.getLabid());
         labapplyMapper.updateById(classapply);
     }
 }

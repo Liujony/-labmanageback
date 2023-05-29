@@ -18,7 +18,7 @@ public class CodeGenerator {
         String password = "labmanageDatabase";
         String moudleName = "sys";
         String mapperLocation = "D:\\A2暂存\\IDEA\\spring项目\\x-admin\\src\\main\\resources\\mapper\\" + moudleName;
-        String tableNames = "LabInUse"; //用逗号分割
+        String tableNames = "TeachLab"; //用逗号分割
 
 
         FastAutoGenerator.create(url, username, password)

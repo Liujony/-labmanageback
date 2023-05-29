@@ -11,5 +11,5 @@ import lombok.Data;
 public class examineTApplyDto {
     private Integer ID;
     private String status;
-    private Integer lab;
+    private Integer labid;
 }
