@@ -210,7 +210,8 @@ public class ClassapplyController {
         labapply.setStatus("审核中");
         labapply.setStuuuid(UUID);
         labapply.setLabid(null);
-        labapplyService.save(labapply);
+        labapplyMapper.insert(labapply);
+//        labapplyService.save(labapply);
         return Result.success();
     }
 

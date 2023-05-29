@@ -1,5 +1,11 @@
 package com.example.sys.entity;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import java.io.Serializable;
 
 /**
@@ -10,10 +16,14 @@ import java.io.Serializable;
  * @author wow
  * @since 2023-05-10
  */
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class Labapply implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
+    @TableId(type = IdType.AUTO,value = "id")
     private Integer id;
 
     private String stuuuid;
@@ -29,6 +39,8 @@ public class Labapply implements Serializable {
     private String status;
 
     private Integer labid;
+
+    private String labtype;
 
     public Integer getId() {
         return id;

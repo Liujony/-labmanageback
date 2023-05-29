@@ -1,6 +1,7 @@
 package com.example.sys.entity;
 
 import com.baomidou.mybatisplus.annotation.TableName;
+import lombok.Data;
 
 import java.io.Serializable;
 
@@ -12,6 +13,7 @@ import java.io.Serializable;
  * @author wow
  * @since 2023-05-11
  */
+@Data
 @TableName("StuApplyLab")
 public class StuApplyLab implements Serializable {
 
@@ -19,7 +21,7 @@ public class StuApplyLab implements Serializable {
 
     private Integer id;
 
-    private String stuuuid;
+    private String username;
 
     private Integer week;
 
@@ -29,9 +31,13 @@ public class StuApplyLab implements Serializable {
 
     private String reason;
 
+    private String labtype;
+
     private String status;
 
     private String name;
+
+
 
     public Integer getId() {
         return id;
@@ -40,12 +46,12 @@ public class StuApplyLab implements Serializable {
     public void setId(Integer id) {
         this.id = id;
     }
-    public String getStuuuid() {
-        return stuuuid;
+    public String getUsername() {
+        return username;
     }
 
-    public void setStuuuid(String stuuuid) {
-        this.stuuuid = stuuuid;
+    public void setUsername(String username) {
+        this.username = username;
     }
     public Integer getWeek() {
         return week;
@@ -94,7 +100,7 @@ public class StuApplyLab implements Serializable {
     public String toString() {
         return "StuApplyLab{" +
             "id=" + id +
-            ", stuuuid=" + stuuuid +
+            ", username=" + username +
             ", week=" + week +
             ", day=" + day +
             ", section=" + section +
